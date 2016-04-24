@@ -3,29 +3,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:paddingLeft="10dp"
         android:paddingTop="3dp"
-        android:textSize="21sp"
+        android:textSize="25sp"
         android:maxLines="1"
         android:maxLength="30"
         android:id="@+id/NoteTitle"
         />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:paddingLeft="10dp"
-        android:paddingTop="30dp"
-        android:textSize="15sp"
-        android:maxLines="1"
-        android:maxLength="100"
-        android:textColor="@android:color/secondary_text_light_nodisable"
-        android:id="@+id/NoteContent"
-        />
 
 </RelativeLayout>

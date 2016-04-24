@@ -32,11 +32,12 @@ public class ListAllNotes extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        assert fab != null;
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(ListAllNotes.this, AddNewNote.class);
-                startActivity(i);
+                Intent intent = new Intent(ListAllNotes.this, EditNote.class);
+                startActivity(intent);
             }
         });
 
@@ -79,7 +80,7 @@ public class ListAllNotes extends AppCompatActivity {
     }
 
     private void viewNoteProcedure( Long noteID) {
-        Intent intent = new Intent(ListAllNotes.this, ViewNote.class);
+        Intent intent = new Intent(ListAllNotes.this, EditNote.class);
         intent.putExtra("noteID", noteID);
         startActivity(intent);
     }

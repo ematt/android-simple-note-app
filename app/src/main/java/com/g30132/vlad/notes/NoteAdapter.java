@@ -28,10 +28,8 @@ public class NoteAdapter extends ArrayAdapter<Note> {
         }
         // Lookup view for data population
         TextView noteTitle = (TextView) convertView.findViewById(R.id.NoteTitle);
-        TextView noteContent = (TextView) convertView.findViewById(R.id.NoteContent);
         // Populate the data into the template view using the data object
         noteTitle.setText(note.getTitle());
-        noteContent.setText(note.getContent());
         // Return the completed view to render on screen
         convertView.setTag(note.getId());
 

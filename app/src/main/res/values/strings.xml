@@ -99,4 +99,9 @@
     <string name="title_hint">Note title</string>
     <string name="action_edit">Edit</string>
     <string name="action_share">Share</string>
+    <string name="select_image">Add image</string>
+    <string name="select_video">Add video</string>
+    <string name="example_post_title_placeholder">Title</string>
+    <string name="example_post_content_placeholder">Note</string>
+    <string name="note_not_found">Note not found</string>
 </resources>
