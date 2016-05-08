@@ -104,4 +104,9 @@
     <string name="example_post_title_placeholder">Title</string>
     <string name="example_post_content_placeholder">Note</string>
     <string name="note_not_found">Note not found</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="add">Add</string>
+    <string name="select_map_screenshot">Add map</string>
+    <string name="select_take_photo">Take phot</string>
+    <string name="title_activity_delete_me">delete_me</string>
 </resources>

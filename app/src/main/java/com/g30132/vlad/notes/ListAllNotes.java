@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ContextMenu;
@@ -12,12 +13,13 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.common.collect.Lists;
 import com.orm.SugarContext;
 
+import java.util.Collections;
 import java.util.List;
 
 public class ListAllNotes extends AppCompatActivity {
@@ -37,10 +39,21 @@ public class ListAllNotes extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ListAllNotes.this, EditNote.class);
+                intent.putExtra(EditNote.DRAFT_PARAM, true);
                 startActivity(intent);
             }
         });
 
+        fab.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                Snackbar snackbar = Snackbar
+                        .make(v, "Aplicatie realizata de Vlad Tuhut", Snackbar.LENGTH_LONG);
+                snackbar.show();
+                return true;
+            }
+        });
+        Note.findById(Note.class, 0);
         SugarContext.init(this);
 
         populateListView();
@@ -49,7 +62,7 @@ public class ListAllNotes extends AppCompatActivity {
 
     private void populateListView() {
         List<Note> noteList = Note.listAll(Note.class);
-        noteList = Lists.reverse(noteList);
+        Collections.reverse(noteList);
 
         list = (ListView)findViewById(R.id.listViewNotes);
 
@@ -82,6 +95,7 @@ public class ListAllNotes extends AppCompatActivity {
     private void viewNoteProcedure( Long noteID) {
         Intent intent = new Intent(ListAllNotes.this, EditNote.class);
         intent.putExtra("noteID", noteID);
+        intent.putExtra(EditNote.DRAFT_PARAM, true);
         startActivity(intent);
     }
 

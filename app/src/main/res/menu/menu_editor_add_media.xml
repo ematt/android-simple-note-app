@@ -9,5 +9,15 @@
         android:id="@+id/editor_add_video"
         android:orderInCategory="200"
         android:title="@string/select_video"
-        android:icon="@android:drawable/presence_video_online" />
+        android:icon="@android:drawable/presence_video_online" />editor_take_photo
+    <item
+        android:id="@+id/editor_add_map_screenshot"
+        android:orderInCategory="200"
+        android:title="@string/select_map_screenshot"
+        android:icon="@android:drawable/ic_dialog_map" />
+    <item
+        android:id="@+id/editor_take_photo"
+        android:orderInCategory="200"
+        android:title="@string/select_take_photo"
+        android:icon="@android:drawable/ic_menu_camera" />
 </menu>
