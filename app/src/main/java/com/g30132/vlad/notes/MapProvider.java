@@ -35,7 +35,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.net.URI;
 import java.util.Random;
 
 /**
@@ -66,6 +65,7 @@ public class MapProvider extends FragmentActivity implements OnMapReadyCallback,
                     .build();
         }
         btn_add = (Button) findViewById(R.id.btn_maps_add);
+        if( btn_add != null )
         btn_add.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 GoogleMap.SnapshotReadyCallback callback = new GoogleMap.SnapshotReadyCallback() {

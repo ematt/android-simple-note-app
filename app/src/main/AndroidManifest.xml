@@ -10,12 +10,12 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyAsyMPDaAB1lc0E5fjfMQF6Riy9pJ9eAEw" />
 
     <application
         android:name="com.orm.SugarApp"
@@ -36,6 +36,13 @@
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.g30132.vlad.notes" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAsyMPDaAB1lc0E5fjfMQF6Riy9pJ9eAEw" />
 
         <activity
             android:name=".ListAllNotes"
